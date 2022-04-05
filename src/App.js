@@ -6,7 +6,7 @@ import NotFound from './components/NotFound';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/blog/">
       <h1><Link to="/">Blog</Link></h1>
       <Routes>
         <Route index element={<Posts />} />
