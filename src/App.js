@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-import React, { Component } from 'react';
-import { render } from '@testing-library/react';
+import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Posts from './components/Posts';
+import Post from './components/Post';
+import NotFound from './components/NotFound';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: '',
-    };
-  };
-
-  render() {
-    return (
-      <React.Fragment>
-        <input type="text" onChange={(e) => this.setState({ value: e.target.value })} />
-        <h1>Hello, {this.state.value}</h1>
-      </React.Fragment>
-    );
-  }
+function App() {
+  return (
+    <BrowserRouter>
+      <h1><Link to="/">Blog</Link></h1>
+      <Routes>
+        <Route index element={<Posts />} />
+        <Route path="post">
+          <Route index element={<NotFound />} />
+          <Route path=":postId" element={<Post />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
