@@ -1,0 +1,11 @@
+@import 'global.scss';
+
+.globalHeader {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h1 {
+        font-size: 3.2rem;
+        text-align: center;
+        color: $color1;
+    }
+}

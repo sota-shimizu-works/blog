@@ -1,0 +1,19 @@
+@import 'reset.scss';
+@import 'variables.scss';
+@import 'mixin.scss';
+
+html {
+    font-size: 10px!important;
+}
+
+body {
+    @extend .robot;
+    font-size: 1.6rem;
+}
+
+.pageWidth {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0px 16px;
+}

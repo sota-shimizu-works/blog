@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import styles from '../css/posts.module.scss';
+
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 const Posts = () => {
 
@@ -20,13 +28,16 @@ const Posts = () => {
             });
     }, []);
     return (
-        <div>
+        <div className={`${styles.postsWrapper}`}>
             <ul>
                 {
                     posts.map(
                         post =>
                             <li key={post.id}>
-                                <Link to={`/post/${post.id}`}>{post.title}</Link>
+                                <Link to={`/post/${post.id}`}>
+                                    <h2>{post.title}</h2>
+                                    <p>{dayjs.utc(post.publishedAt).tz('Asia/Tokyo').format('YYYY-MM-DD')}</p>
+                                </Link>
                             </li>
                     )
                 }
@@ -35,5 +46,4 @@ const Posts = () => {
     )
 
 }
-
 export default Posts

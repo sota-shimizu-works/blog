@@ -1,0 +1,34 @@
+$color1: #041C32;
+$color2: #04293A;
+$color3: #064663;
+$color4: #ECB365;
+$color5: #ffffff;
+
+//break point
+$break-point_xl: 1200px;
+$break-point_lg: 1024px;
+$break-point-md: 768px;
+$break-point-sp: 540px;
+$break-point-xs: 375px;
+
+//palette
+@import url("https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap");
+//robot
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+//raleway
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+//rubik
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+.palette {
+    font-family: "Palette Mosaic", cursive;
+}
+.robot {
+    font-family: "Roboto", sans-serif;
+}
+.raleway {
+    font-family: "Raleway", sans-serif;
+}
+.rubik {
+    font-family: "Rubik", sans-serif;
+}
