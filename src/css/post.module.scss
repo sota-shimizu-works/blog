@@ -1,0 +1,58 @@
+@import "global.scss";
+
+.postWrapper {
+    h1 {
+        font-size: 4rem;
+        font-weight: 600;
+        margin-top: 4rem;
+        margin-bottom: 1.5rem;
+    }
+}
+.bodyWrapper {
+    line-height: 2;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin-top: 4rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-top: 3.2rem;
+    }
+
+    ul {
+        padding-top: 1.6rem;
+        padding-bottom: 3.2rem;
+        li {
+            padding-bottom: 0.2em;
+            &::before {
+                content: "-";
+                margin-right: 1em;
+            }
+        }
+    }
+
+    code {
+        display: block;
+        background-color: $color1;
+        color: $color4;
+        padding: 2.4rem;
+        border-radius: 0.3rem;
+        margin: 4rem auto;
+    }
+
+    blockquote {
+        padding: 2.4rem;
+        border-left: 3px $color4 solid;
+        margin: 4rem auto;
+        font-style: italic;
+    }
+}

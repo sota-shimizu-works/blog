@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios'
+import axios from 'axios';
+import styles from '../css/post.module.scss';
 
 function Post() {
     const params = useParams();
@@ -20,10 +21,9 @@ function Post() {
     }, []);
 
     return (
-        <div>
-            <h2>{post.title}</h2>
-            <div><span>{post.publish_datetime}</span></div>
-            <div dangerouslySetInnerHTML={{ __html: post.body }}></div>
+        <div className={`${styles.postWrapper}`}>
+            <h1>{post.title}</h1>
+            <div className={`${styles.bodyWrapper}`} dangerouslySetInnerHTML={{ __html: post.body }}></div>
         </div>
     )
 }

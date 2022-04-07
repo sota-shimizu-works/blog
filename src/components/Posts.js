@@ -22,9 +22,7 @@ const Posts = () => {
             }
         })
             .then(res => {
-                console.log(res);
                 setPosts(res.data.contents)
-                console.log(posts);
             });
     }, []);
     return (
@@ -36,7 +34,11 @@ const Posts = () => {
                             <li key={post.id}>
                                 <Link to={`/post/${post.id}`}>
                                     <h2>{post.title}</h2>
-                                    <p>{dayjs.utc(post.publishedAt).tz('Asia/Tokyo').format('YYYY-MM-DD')}</p>
+                                    <p className={`${styles.date}`}>
+                                        {dayjs.utc(post.publishedAt).tz('Asia/Tokyo').format('dddd, MMMM DD YYYY')}
+                                    </p>
+                                    <div className={`${styles.body}`} dangerouslySetInnerHTML={{ __html: post.body }}>
+                                    </div>
                                 </Link>
                             </li>
                     )

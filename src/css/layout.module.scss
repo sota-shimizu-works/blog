@@ -1,0 +1,11 @@
+@import "global.scss";
+
+.mainWrapper {
+    display: flex;
+    gap: 4rem;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    main {
+        flex-basis: 75%;
+    }
+}

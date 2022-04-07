@@ -6,11 +6,14 @@ import Posts from './components/Posts';
 import Post from './components/Post';
 import NotFound from './components/NotFound';
 
+import styles from './css/layout.module.scss';
+
+
 function App() {
   return (
     <BrowserRouter basename="/blog/">
       <Header />
-      <div className="main-wrapper">
+      <div className={`${styles.mainWrapper} ${styles.pageWidth}`}>
         <main>
           <Routes>
             <Route index element={<Posts />} />

@@ -1,0 +1,33 @@
+@import "global.scss";
+
+.sideBar {
+    .profile {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        img {
+            max-width: 5rem;
+            border-radius: 100%;
+            box-shadow: 0px 7.5px 7.5px -5px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            &.name {
+                font-size: 1.4rem;
+                span {
+                    margin-top: 0.5em;
+                    display: block;
+                    font-size: 1.2rem;
+                    color: rgba($color1, 0.6);
+                }
+            }
+        }
+    }
+    .links {
+        display: flex;
+        a {
+            svg {
+                max-width: 2.5rem;
+            }
+        }
+    }
+}
