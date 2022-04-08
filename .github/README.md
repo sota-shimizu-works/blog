@@ -13,3 +13,5 @@ https://sota-shimizu-works.github.io/blog/
 - react-router-dom
 - axcios
 - dotnev-webpack
+- day.js
+- font-awesome
